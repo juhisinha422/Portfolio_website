@@ -2,7 +2,7 @@
 
 A personal portfolio website showcasing my skills, experience, and DevOps projects.
 
-🌐 **Live Site:** [juhisinha422.github.io](https://juhisinha422.github.io)
+🌐 **Live Site:** [juhisinha422.github.io](https://juhisinha422.github.io/Portfolio_website/#contact)
 
 ---
 
