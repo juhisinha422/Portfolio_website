@@ -1,19 +1,31 @@
-document.getElementById("contactForm").addEventListener("submit", async function (e) {
-  e.preventDefault();
+document.addEventListener("DOMContentLoaded", () => {
 
-  const form = e.target;
-  const data = new FormData(form);
+const form = document.getElementById("contactForm");
+const responseMessage = document.getElementById("formResponse");
 
-  const response = await fetch("/contact", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(Object.fromEntries(data)),
-  });
+if (!form) return;
 
-  const result = await response.json();
-  document.getElementById("formResponse").textContent = result.message;
+form.addEventListener("submit", function(e){
 
-  if (response.ok) form.reset();
+e.preventDefault();
+
+const name = form.name.value;
+const email = form.email.value;
+const message = form.message.value;
+
+if(name === "" || email === "" || message === ""){
+
+responseMessage.textContent = "Please fill all fields";
+responseMessage.style.color = "red";
+return;
+
+}
+
+responseMessage.textContent = "Thank you! Your message has been received.";
+responseMessage.style.color = "#00eaff";
+
+form.reset();
+
+});
+
 });
