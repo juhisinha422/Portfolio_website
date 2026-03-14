@@ -4,18 +4,20 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg-dark:      #0d0f1a;
-  --bg-card:      rgba(255,255,255,0.04);
-  --bg-card-hover:rgba(255,255,255,0.08);
-  --accent:       #5b8dee;       /* calm professional blue */
-  --accent-soft:  #3a6bd4;
-  --accent-glow:  rgba(91,141,238,0.25);
-  --text-primary: #e8eaf0;
-  --text-muted:   #8b92a9;
-  --border:       rgba(255,255,255,0.08);
+  --bg-dark:      #0b1120;       /* deep navy - matches image body */
+  --bg-hero:      #0d1e2e;       /* slightly teal-navy for hero strip */
+  --bg-card:      #152035;       /* card surface - lighter navy */
+  --bg-card-hover:#1a2a42;
+  --accent:       #00c9b8;       /* teal cyan - matches image headings */
+  --accent-soft:  #00a89a;
+  --accent-glow:  rgba(0,201,184,0.18);
+  --heading-gold: #f0c040;       /* yellow-gold for section titles */
+  --text-primary: #dce6f0;
+  --text-muted:   #7e93ad;
+  --border:       rgba(255,255,255,0.07);
   --success:      #4caf8a;
-  --radius:       12px;
-  --shadow:       0 4px 24px rgba(0,0,0,0.4);
+  --radius:       14px;
+  --shadow:       0 4px 28px rgba(0,0,0,0.5);
 }
 
 html { scroll-behavior: smooth; }
@@ -78,7 +80,8 @@ body {
 .hero {
   text-align: center;
   padding: 90px 24px 70px;
-  background: radial-gradient(ellipse at 50% 0%, rgba(91,141,238,0.12) 0%, transparent 65%);
+  background: linear-gradient(160deg, #0d1e2e 0%, #0b1120 60%);
+  border-bottom: 1px solid var(--border);
 }
 
 .hero-img {
@@ -192,7 +195,7 @@ body {
 .section-title {
   font-size: 26px;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--heading-gold);   /* gold headings like the image */
   margin-bottom: 36px;
   position: relative;
   padding-bottom: 14px;
@@ -203,7 +206,7 @@ body {
   position: absolute;
   left: 0; bottom: 0;
   width: 48px; height: 3px;
-  background: var(--accent);
+  background: var(--heading-gold);
   border-radius: 2px;
 }
 
